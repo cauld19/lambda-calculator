@@ -11,14 +11,16 @@ import { numbers } from '../../../data'
 
 const Numbers = (props) => {
   // STEP 2 - add the imported data to state
-  const [numbersState] = useState(numbers);
+  const [numberState] = useState(numbers);
+
+  
 
 
   return (
     <div>
-      { numbersState.map((data, index) => (
-        <NumberButton key ={index} numberData={data} />
-      ))}
+      {numberState.map((data, index) => 
+        <NumberButton  key={index} numberData={data}/>
+      )}
     </div>
   );
 };
