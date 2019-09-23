@@ -1,9 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 
-const Display = (props) => {
-
+const Display = () => {
+  const [display, setDisplay] = useState(0);
   
-  return <div className="display">{props.display}</div>;
+  return <div className="display">{display}</div>;
 };
 
 
