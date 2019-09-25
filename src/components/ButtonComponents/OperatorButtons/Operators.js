@@ -16,8 +16,8 @@ const Operators = (props) => {
 
   return (
     <div>
-      { operatorState.map((data, index) => (
-        <OperatorButton key ={index} operatorData={data.char} />
+      { operatorState.map((data) => (
+         <OperatorButton key={data.char} operatorData={data.value} operatorChar={data.char} handleButtonPress={props.handleButtonPress}/>
       ))}
     </div>
   );

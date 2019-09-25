@@ -6,6 +6,7 @@ import Operators from "./components/ButtonComponents/OperatorButtons/Operators";
 import Display from "./components/DisplayComponents/Display";
 
 
+
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
 
@@ -20,6 +21,17 @@ function App() {
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
 
+  const [count, setCount] = useState('');
+
+  const handleButtonPress = (buttonValue) => {
+    console.log(buttonValue);
+    setCount(count + buttonValue);
+  }
+
+
+
+
+
 
 
   return (
@@ -27,16 +39,27 @@ function App() {
       <Logo />
       <div className="App">
       <div className = "display">
-          <Display />
+          <Display 
+            count={count}
+            setCount={setCount}
+          />
         </div>
         <div className = "numbers-div">
-          <Numbers />
+          <Numbers 
+            handleButtonPress={handleButtonPress}
+          />
         </div>
         <div className = "operators-div">
-          <Operators />
+          <Operators 
+            handleButtonPress={handleButtonPress}
+
+          
+          />
         </div>
         <div className = "specials-div">
-          <Specials />
+          <Specials
+            handleButtonPress={handleButtonPress}
+          />
         </div>
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
       </div>

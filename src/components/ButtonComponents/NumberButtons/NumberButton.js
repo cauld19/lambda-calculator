@@ -1,8 +1,9 @@
 import React from "react";
 
+
  const NumberButton = (props) => {
   return (
-    <button>
+    <button onClick={() => {props.handleButtonPress(props.numberData)}}>
       {props.numberData}
     </button>
   );
