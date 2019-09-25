@@ -15,7 +15,7 @@ const Operators = (props) => {
 
 
   return (
-    <div>
+    <div className="operator-container">
       { operatorState.map((data) => (
          <OperatorButton key={data.char} operatorData={data.value} operatorChar={data.char} handleButtonPress={props.handleButtonPress}/>
       ))}

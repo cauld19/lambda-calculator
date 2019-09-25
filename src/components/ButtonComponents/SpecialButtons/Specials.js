@@ -13,7 +13,7 @@ const Specials = (props) => {
 
 
   return (
-    <div>
+    <div className="special-container">
       { specialState.map((data) => (
         <SpecialButton key={data} specialData={data} handleButtonPress={props.handleButtonPress} />
       ))}

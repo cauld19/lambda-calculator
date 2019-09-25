@@ -18,11 +18,11 @@ const Numbers = (props) => {
 
 
   return (
-    <div>
+    <React.Fragment>
       {numberState.map((data, index) => 
         <NumberButton  key={index} numberData={data} handleButtonPress={props.handleButtonPress}/>
       )}
-    </div>
+    </React.Fragment>
   );
 };
 

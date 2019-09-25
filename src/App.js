@@ -7,6 +7,7 @@ import Display from "./components/DisplayComponents/Display";
 
 
 
+
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
 
@@ -38,29 +39,42 @@ function App() {
     <div className="container">
       <Logo />
       <div className="App">
-      <div className = "display">
+        
+      
+        <div className = "display">
           <Display 
             count={count}
             setCount={setCount}
           />
         </div>
-        <div className = "numbers-div">
-          <Numbers 
-            handleButtonPress={handleButtonPress}
-          />
-        </div>
-        <div className = "operators-div">
-          <Operators 
-            handleButtonPress={handleButtonPress}
 
+
+        <div className="button-total">
+          <div className="center-buttons">
+            <div className = "specials-div">
+              <Specials
+                handleButtonPress={handleButtonPress}
+              />
+            </div>
           
-          />
+            <div className = "numbers-div">
+              <Numbers 
+                handleButtonPress={handleButtonPress}
+              />
+            </div>
+          </div>
+          
+          <div className = "operators-div">
+            <Operators 
+              handleButtonPress={handleButtonPress}
+            />
+          </div>
         </div>
-        <div className = "specials-div">
-          <Specials
-            handleButtonPress={handleButtonPress}
-          />
-        </div>
+
+
+        
+        
+        
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Display = (props) => {
   
-  return <div>{props.count}</div>;};
+  return <div className="display-screen">{props.count}</div>;};
 
 
 export default Display;

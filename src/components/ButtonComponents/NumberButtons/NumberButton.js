@@ -3,7 +3,7 @@ import React from "react";
 
  const NumberButton = (props) => {
   return (
-    <button onClick={() => {props.handleButtonPress(props.numberData)}}>
+    <button className="number-buttons" onClick={() => {props.handleButtonPress(props.numberData)}}>
       {props.numberData}
     </button>
   );
