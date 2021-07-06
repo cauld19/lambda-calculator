@@ -1,5 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
+import Numbers from "./components/ButtonComponents/NumberButtons/Numbers";
+import Specials from "./components/ButtonComponents/SpecialButtons/Specials";
+import Operators from "./components/ButtonComponents/OperatorButtons/Operators";
+import Display from "./components/DisplayComponents/Display";
+
+
+
+
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
 
@@ -13,10 +21,60 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
+
+  const [count, setCount] = useState('');
+
+  const handleButtonPress = (buttonValue) => {
+    console.log(buttonValue);
+    setCount(count + buttonValue);
+  }
+
+
+
+
+
+
+
   return (
     <div className="container">
       <Logo />
       <div className="App">
+        
+      
+        <div className = "display">
+          <Display 
+            count={count}
+            setCount={setCount}
+          />
+        </div>
+
+
+        <div className="button-total">
+          <div className="center-buttons">
+            <div className = "specials-div">
+              <Specials
+                handleButtonPress={handleButtonPress}
+              />
+            </div>
+          
+            <div className = "numbers-div">
+              <Numbers 
+                handleButtonPress={handleButtonPress}
+              />
+            </div>
+          </div>
+          
+          <div className = "operators-div">
+            <Operators 
+              handleButtonPress={handleButtonPress}
+            />
+          </div>
+        </div>
+
+
+        
+        
+        
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
       </div>
     </div>

@@ -8,6 +8,7 @@
 }
 .display {
     margin-top: 25px;
+    margin: 0 auto;
     height: 100px;
     width: 450px;
     border-radius: 50px;
@@ -19,4 +20,55 @@
     align-items: flex-end;
     padding-right: 8%;
     font-size: 5.0rem;
-  }
+}
+
+.App {
+    display: flex;
+    flex-flow: column nowrap;
+} 
+
+button {
+    height: 5rem;
+    width: 5rem; 
+    border-radius: 50%;
+    background-color: rgb(28, 28, 119);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    box-shadow: 0px 5px 0px 0px rgba(66,64,66,1);
+    margin: 0.5rem 1.2rem 0.5rem 1.2rem;
+}
+
+.operator-buttons {
+    background-color: lightblue;
+}
+
+.special-buttons {
+    background-color: #3366ff;
+}
+
+.number-buttons:nth-child(10) {
+    flex-grow: 2;
+    border-radius: 3rem;
+}
+
+
+.button-total {
+    display: flex;
+    margin: 2rem;
+}
+
+
+.special-container {
+    display: flex;
+}
+.numbers-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    margin: 2rem;
+}
+
